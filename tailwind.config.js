@@ -13,6 +13,8 @@ module.exports = {
     extend: {
       display: ['first'],
       width: ['first'],
+      height: ['hover'],
+      scale: ['hover']
     }
   },
   plugins: [],
