@@ -4,9 +4,10 @@ module.exports = {
   theme: {
     extend: {},
     screen:{
-      'md' : '769px',
-      'lg' : '991px',
-      'xl' : '1201px'
+      'md' : '766px',
+      'lg' : '990px',
+      'xl' : '1200px',
+      '2xl': '1920px'
     }
   },
   variants: {

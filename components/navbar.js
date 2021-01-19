@@ -6,7 +6,7 @@ export default function Navbar(){
 
     return(
         <>
-        <div className={"lg:hiddden z-40 fixed top-0 left-0 w-full min-h-screen bg-black transform-gpu " + ( navBarState ? "bg-opacity-70" : "bg-opacity-0") + " transition -delay-150"} onClick={() => { if(navBarState) setState(false) }}></div>
+        <div className={"lg:hidden z-40 fixed top-0 left-0 w-full min-h-screen bg-black transform-gpu " + ( navBarState ? "bg-opacity-70" : "bg-opacity-0") + " transition -delay-150"} onClick={() => { if(navBarState) setState(false) }}></div>
         <nav className={"fixed lg:relative z-50 top-0 left-0 w-56 min-h-screen lg:min-h-auto lg:justify-self-start transform " + ( navBarState ? "translate-x-0" : "-translate-x-56") + " lg:transform-none transition bg-purple-400"}>
             NAVIGATION
         </nav>
