@@ -1,9 +1,7 @@
-export default function Related(){
+export default function Related(props){
     return(
-        <>
-            <div className="flex p-1 w-full xl:w-56 h-56 xl:min-h-full flex-shrink-0 bg-green-400">
-                SIDEBAR
-            </div>
-        </>
+    <div className="h-36 xl:w-56 xl:h-auto xl:min-h-full bg-yellow-900">
+        {props.children}
+    </div>
     )
 }
