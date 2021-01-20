@@ -4,12 +4,14 @@ import Articles from '../components/articles'
 import { connectToDatabase } from '../util/mongodb'
 
 export default function Home({articles}) {
+console.log(articles);
+
   return (
     <LayoutV2>
       <Head>
         <title>Home</title>
       </Head>
-      <Articles articles={articles}/>
+      <Articles data={articles} />
     </LayoutV2>
   )
 }
@@ -25,7 +27,7 @@ export async function getServerSideProps() {
   
   return {
       props: {
-          movies: JSON.parse(JSON.stringify(articles)),
+          articles: JSON.parse(JSON.stringify(articles)),
       },
   };
 }
