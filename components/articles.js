@@ -14,7 +14,7 @@ export default function Articles(props){
                         <div className="overflow-hidden w-full h-48">
                             <img className="object-cover w-full h-full transition-transform transform xl:hover:scale-110" src={imagesPath + article.imageId + ".jpg"} loading="lazy" />
                         </div>
-                        <div className="w-full text-sm">Tags: {article.tags}</div>
+                        <div className="w-full text-sm">{article.tags.join(' ')}</div>
                         <div className="w-full text-sm">{moment(article.date).fromNow()}</div>
                         <div className="w-full text-sm">por Raphael Kox</div>                        
                     </div>
@@ -24,3 +24,4 @@ export default function Articles(props){
         </>
     )
 }
+
