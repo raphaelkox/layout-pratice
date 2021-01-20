@@ -2,6 +2,9 @@ import Navbar from "./navbar";
 import Related from "./related";
 
 export default function LayoutV2(props){
+    const contentCount = 5;
+    let contentList = Array.from(Array(contentCount).keys());   
+
     return(
         <>
             <div className="flex flex-col w-full min-w-screen-sm min-h-screen items-center bg-black 2xl:bg-white">
@@ -12,11 +15,17 @@ export default function LayoutV2(props){
                     <main className="w-full flex flex-row flex-grow bg-gray-900">
                         <Navbar />
                         <div className="flex flex-col xl:flex-row flex-grow">
-                            <div className="max-w-screen-md 2xl:max-w-none flex-grow bg-red-900">
+                            <div className="max-w-screen-md 2xl:max-w-none flex flex-wrap flex-grow bg-red-900">
                                 {props.children}
                             </div>
                             <Related>
-                                RELATED
+                            {contentList.map(x => {
+                                return(
+                                    <>
+                                        <div className="w-48 h-48 flex-shrink-0 rounded-md bg-yellow-700">TEST</div>
+                                    </>
+                                )
+                            })}
                             </Related>
                         </div>
                     </main>
